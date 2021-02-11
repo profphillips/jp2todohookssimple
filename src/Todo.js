@@ -27,8 +27,9 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
             <span
               style={{
                 marginLeft: "5px",
-                textDecoration: completed ? "line-through" : "none",
-                color: completed ? "green" : "red",
+                // textDecoration: completed ? "line-through" : "none",
+                fontWeight: !completed ? "normal":"lighter",
+                // color: completed ? "green" : "red",
               }}
             >
               {task}
@@ -39,6 +40,8 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
                 aria-label="Delete"
                 onClick={() => removeTodo(id)}
                 style={{
+                  // margin: "10, 0, 0, 5",
+                  marginTop: 5,
                   marginLeft: 5,
                   padding: 0,
                   width: "60px",
@@ -51,6 +54,7 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
                 aria-label="Edit"
                 onClick={toggle}
                 style={{
+                  marginTop: 5,
                   marginLeft: 5,
                   padding: 0,
                   width: "60px",

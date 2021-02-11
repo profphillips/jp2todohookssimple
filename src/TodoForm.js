@@ -4,7 +4,7 @@ import useInputState from "./hooks/useInputState";
 function TodoForm({ addTodo }) {
   const [value, handleChange, reset] = useInputState("");
   return (
-      <form style={{marginLeft:15}}
+      <form style={{marginLeft:0}}
         onSubmit={(e) => {
           e.preventDefault();
           addTodo(value);
@@ -18,7 +18,7 @@ function TodoForm({ addTodo }) {
           onChange={handleChange}
           label="Add New Todo"
           autoFocus={true}
-          style={{color:"red", width:"80%"}}
+          style={{width:"90%", padding:"10px"}}
         />
       </form>
   );

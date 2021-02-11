@@ -5,13 +5,20 @@ function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
   if (todos.length)
     return (
       <div>
-        <ul
-          style={{ margin: "20 0 0 0", padding: 0, listStyleType: "none" }}
-        >
+        <ul style={{ margin: "20 0 0 0", padding: 0, listStyleType: "none" }}>
           {todos.map((todo, i) => (
             // To add a key to a fragment, we have to use the long-hand version
             // rather than <> </>, we have to use <React.Fragment>
-            <li key={i} style={{ color: "green", padding: 10 }}>
+            <li
+              key={i}
+              style={{
+                display: "grid",
+                padding: 4,
+                // marginBottom: "15px",
+                // background: i % 2 ? "#c2cad0" : "#afd275",
+                background: i%2?"#ddaf94":"#e8cebf"
+              }}
+            >
               {/* <React.Fragment key={i}> */}
               <Todo
                 {...todo}

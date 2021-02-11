@@ -18,9 +18,19 @@ function TodoApp() {
   }, [todos]);
 
   return (
-    <div style={{maxWidth:"500px", marginLeft:"10px"}}>
+    <div
+      style={{
+        margin: "auto",
+        marginTop: "1rem",
+        maxWidth: "800px",
+        padding: "1rem",
+        paddingTop: "0.1rem",
+        background: "#fdf8f5",
+        color:"#4f4846",
+      }}
+    >
       <h1>JP2 TODO HOOKS SIMPLIFIED</h1>
-      <p>Updated, styled, and simplified by JP ... work in progress</p>
+      <h2 style={{color:"#266150"}}>Updated, styled, and simplified by JP ... work in progress</h2>
       <TodoForm addTodo={addTodo} />
       <TodoList
         todos={todos}
